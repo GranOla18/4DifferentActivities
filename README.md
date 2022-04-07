@@ -18,4 +18,4 @@ This Activity is an RSSFeed reader of the latest publised animes, here the user 
 ## 4. Play Video
 This Activity display a video from youtube, it has the basic video control tools.
 
-<a href="https://drive.google.com/file/d/1jtNNn5Sa3z2EIFo4mHYzrxyuKcqXe0sW/view?usp=sharing" target="_blank">Here </a> you can watch a video of the project running.
+<a href="https://drive.google.com/file/d/1jtNNn5Sa3z2EIFo4mHYzrxyuKcqXe0sW/view?usp=sharing" target="_blank">Here</a> you can watch a video of the project running.
