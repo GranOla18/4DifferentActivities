@@ -29,7 +29,7 @@ class ParseApplication {
                 when (eventType) {
                     XmlPullParser.START_TAG -> {
                         Log.d(TAG, "parse: Starting tag for: $tagName")
-                        if(tagName == "entry") {
+                        if(tagName == "item") {
                             tagInEntry = true
                         }
                     }
@@ -40,14 +40,15 @@ class ParseApplication {
                         Log.d(TAG, "parse: Ending tag for: $tagName")
                         if(tagInEntry) {
                             when(tagName) {
-                                "entry" -> {
+                                "item" -> {
                                     applications.add(currentRecord)
                                     tagInEntry = false
                                     currentRecord = FeedEntry()
                                 }
                                 "title" -> currentRecord.title = textValue
-                                "pubDate" -> currentRecord.pubDate = textValue
-                                "desription" -> currentRecord.description = textValue
+                                "pubdate" -> currentRecord.pubDate = textValue
+                                "creator" -> currentRecord.author = textValue
+                                "description" -> currentRecord.description = textValue
                             }
                         }
                     }

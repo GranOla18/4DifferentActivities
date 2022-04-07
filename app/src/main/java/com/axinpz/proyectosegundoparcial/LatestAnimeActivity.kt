@@ -14,12 +14,14 @@ import kotlin.properties.Delegates
 class FeedEntry {
     var title: String = ""
     var pubDate: String = ""
+    var author: String = ""
     var description = ""
 
     override fun toString(): String {
         return """"
             title = $title
             pubDate = $pubDate
+            author = $author
             description = $description
             """.trimIndent()
     }
@@ -36,7 +38,7 @@ class LatestAnimeActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate")
 
         val downloadData = DownloadData(this, recyclerView)
-        downloadData.execute("https://animexinfo.webnode.com/rss/all.xml")
+        downloadData.execute("http://blog.alltheanime.com/feed/")
         Log.d(TAG, "onCreate DONE")
     }
 

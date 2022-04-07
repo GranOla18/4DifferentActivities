@@ -32,7 +32,8 @@ class ApplicationsAdapter(context: Context, feedEntries: ArrayList<FeedEntry>): 
         val currentFeedEntry: FeedEntry = localFeedEntries!![position]
         holder.textTitle.text = currentFeedEntry.title
         holder.textPubDate.text = currentFeedEntry.pubDate
-        holder.textDesc.text = currentFeedEntry.description.take(250).plus("...")
+        holder.textAuthor.text = currentFeedEntry.author
+        holder.textDesc.text = currentFeedEntry.description.take(250).plus(" ...")
 
     }
 
@@ -45,6 +46,7 @@ class ApplicationsAdapter(context: Context, feedEntries: ArrayList<FeedEntry>): 
 
         val textTitle: TextView = v.findViewById(R.id.textViewTitle)
         val textPubDate: TextView = v.findViewById(R.id.textViewPubDate)
+        val textAuthor: TextView = v.findViewById(R.id.textViewAuthor)
         val textDesc: TextView = v.findViewById(R.id.textViewDesc)
     }
 }
